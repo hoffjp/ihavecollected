@@ -4,10 +4,11 @@ default: &default
   encoding: unicode
   pool: 5
 
-production:
+development:
   <<: *default
-  host: <%= ENV['APP_DB_HOST'] %>
-  port: <%= ENV['APP_DB_PORT'] || "3306" %>
-  database: <%= ENV['APP_DB_DATABASE'] %>
-  username: <%= ENV['APP_DB_USERNAME'] %>
-  password: <%= ENV['APP_DB_PASSWORD'] %>
+  database: havecollected_development_thom
+
+test:
+  <<: *default
+  database: havecollected_test_test
+
