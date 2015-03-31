@@ -1,0 +1,13 @@
+# PostgreSQL. Versions 8.2 and up are supported.
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+production:
+  <<: *default
+  host: <%= ENV['APP_DB_HOST'] %>
+  port: <%= ENV['APP_DB_PORT'] || "3306" %>
+  database: <%= ENV['APP_DB_DATABASE'] %>
+  username: <%= ENV['APP_DB_USERNAME'] %>
+  password: <%= ENV['APP_DB_PASSWORD'] %>
