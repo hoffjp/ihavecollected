@@ -6,9 +6,9 @@ default: &default
 
 development:
   <<: *default
-  database: havecollected_development_thom
+  database: havecollected_development
 
 test:
   <<: *default
-  database: havecollected_test_test
+  database: havecollected_test
 
