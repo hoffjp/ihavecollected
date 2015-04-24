@@ -1,22 +1,44 @@
 class CollectionsController < ApplicationController
+  before_action :set_collection , only: [:show, :edit, :update, :destroy]
+  
   def new
     @collection = Collection.new 
   end
 
   def show
-    @all_collections = current_user.collections
+    
   end
 
+  def index 
+    @all_collections = current_user.collections
+  end 
+  
   def edit
   end
 
   def create
     @collection = current_user.collections.new(collection_params)
     @collection.save
-    redirect_to collections_show_path
+    redirect_to collections_path
   end
   
-  def collection_params
-    params.require(:collection).permit(:user_id,:object ,:name)
+  def update
+    @collection.update(collection_params)
+    redirect_to collections_path
+  end
+  
+  def destroy
+    @collection.destroy
+    redirect_to collections_path
+  end
+  
+  private
+    def set_collection
+      @collection = Collection.find(params[:id])
     end
+
+    def collection_params
+      params.require(:collection).permit(:user_id,:object ,:name)
+    end
+  
 end

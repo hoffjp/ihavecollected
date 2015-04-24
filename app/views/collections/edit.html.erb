@@ -1,2 +1,12 @@
 <h1>Collections#edit</h1>
 <p>Find me in app/views/collections/edit.html.erb</p>
+
+<%= form_for @collection, url: {action: "update", method: "patch"} do |f| %>
+<%= f.label "Collection Name Change" %>
+<%= f.text_field :name%>
+<br>
+<%= f.submit "Update"  %>
+<!--%= link_to "Delete", collection_path(@collection), method: :delete % -->
+<% end %>
+
+<%= button_to "Delete", collection_path(@collection), method: :delete %>

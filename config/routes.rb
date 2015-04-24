@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'collections/new'
-
-  get 'collections/show'
-
-  get 'collections/edit'
-
-  post 'collections/create'
+  resources :collections
 
   root 'pages#show'
   
