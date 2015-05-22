@@ -8,4 +8,14 @@
 <%= link_to "Register", new_user_registration_path %>
 <% end %>
 
+<h2>Public Collections</h2>
+<% @collections.each do |col| %>
+  <% if col.personal == false %>
+    <li><%= col.name %></li>
+  <% end %>
+<% end %>
+
+<dev>
+  <br>
 <%= link_to "About" %>
+</dev>

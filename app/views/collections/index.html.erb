@@ -4,5 +4,11 @@
 <%= link_to "New" , new_collection_path %>
 
 <% @all_collections.each do |collection| %>
-<li> <%= link_to collection.name , collection_path(collection) %> </li>
+<li> <%= link_to collection.name , collection_path(collection) %> 
+  <% if (collection.personal == true) %> 
+        Personal
+  <% else %>
+        Public
+  <% end %>
+</li>
 <% end %>
