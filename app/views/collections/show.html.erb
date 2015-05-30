@@ -1,4 +1,16 @@
 <h1>Collections#show</h1>
 <p>Find me in app/views/collections/show.html.erb</p>
 
-<%= link_to @collection.name, edit_collection_path(@collection)%> 
+<% if current_user.id == @collection.user_id %>
+  <%= link_to @collection.name, edit_collection_path(@collection)%> 
+<dev>
+  <h3>Description</h5>
+  <p><%= @collection.description %></p>
+</dev>
+<% else %>
+  <h2><%= flash[:alert] %></h2>
+  
+<% end %>
+<br>
+<br>
+<%= link_to "Back to My Collections" , collections_path %>

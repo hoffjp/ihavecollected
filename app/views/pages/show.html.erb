@@ -1,21 +1,28 @@
 
 
-<% if current_user %>
-<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-<%= link_to "Collections", collections_path %>
-<% else %> 
+<% if !current_user %>
+
 <%= link_to "Sign In", new_user_session_path %>
 <%= link_to "Register", new_user_registration_path %>
 <% end %>
 
-<h2>Public Collections</h2>
+<h2>All Public Collections</h2>
 <% @collections.each do |col| %>
   <% if col.personal == false %>
     <li><%= col.name %></li>
   <% end %>
 <% end %>
 
+<% if current_user %>
+  <h2>Personal Collections</h2>
+  <% @user_col.each do |col| %>
+    <% if col.personal == true %>
+      <li><%= col.name %></li>
+    <% end %>
+  <% end %>
+<% end %>
 <dev>
+  
   <br>
 <%= link_to "About" %>
 </dev>

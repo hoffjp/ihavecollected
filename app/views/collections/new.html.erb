@@ -1,15 +1,4 @@
 <h1>Collections#new</h1>
 <p>Find me in app/views/collections/new.html.erb</p>
 
-<%= form_for @collection, url: {action: "create"} do |f| %>
-<%= f.label "New Collection" %>
-<%= f.text_field :name, required: true%>
-<br>
-<%= f.radio_button(:personal, true) %>
-<%= f.label(:personal_true, "Personal: Only you can see") %>
-<br>
-<%= f.radio_button(:personal, false) %>
-<%= f.label(:personal_false, "Public: Everyone can see") %>
-<br>
-<%= f.submit "Create Collection"  %>
-<% end %>
+<%= render 'form' %>

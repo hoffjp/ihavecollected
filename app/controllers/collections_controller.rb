@@ -1,4 +1,5 @@
 class CollectionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_collection , only: [:show, :edit, :update, :destroy]
   
   def new
@@ -6,7 +7,9 @@ class CollectionsController < ApplicationController
   end
 
   def show
-    
+    if current_user.id != @collection.user_id
+      flash.now[:alert] = "*** Cannot Edit Others Collections ***"
+    end
   end
 
   def index 
@@ -34,11 +37,13 @@ class CollectionsController < ApplicationController
   
   private
     def set_collection
-      @collection = Collection.find(params[:id])
+     
+        @collection = Collection.find(params[:id])
+      
     end
-
+  
     def collection_params
-      params.require(:collection).permit(:user_id,:object ,:name, :personal)
+      params.require(:collection).permit(:user_id,:object ,:name, :personal,:description)
     end
   
 end

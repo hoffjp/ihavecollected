@@ -1,11 +1,12 @@
-<h1>Collections#index</h1>
-<p>Find me in app/views/collections/index.html.erb</p>
+
+<h1>My Collections</h1>
 
 <%= link_to "New" , new_collection_path %>
+<br><br>
 
 <% @all_collections.each do |collection| %>
 <li> <%= link_to collection.name , collection_path(collection) %> 
-  <% if (collection.personal == true) %> 
+  <% if (collection.personal == true) and current_user %> 
         Personal
   <% else %>
         Public
