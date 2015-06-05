@@ -1,0 +1,19 @@
+<%= form_for @collection do |f| %>
+<%= f.label "Collection Name" %>
+<%= f.text_field :name%>
+<br>
+<%= f.radio_button(:personal, true) %>
+<%= f.label(:personal_true, "Personal: Only you can see") %>
+<br>
+<%= f.radio_button(:personal, false) %>
+<%= f.label(:personal_false, "Public: Everyone can see") %>
+<br>
+<%= f.label "Description" %>
+<br>
+<%= f.text_area :description, rows: 5%>
+
+<br>
+<%= f.submit %>
+<!--%= link_to "Delete", collection_path(@collection), method: :delete % -->
+
+<% end %>

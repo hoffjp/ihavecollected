@@ -1,5 +1,6 @@
 <h1>I Have Collected</h1>
 
+<nav>
 <% if current_user %>
 <p>User Logged In: <%= current_user.email %> </p>
 <p><%= link_to "Home" , root_path %>
@@ -8,3 +9,4 @@
 
 </p>
 <% end %>
+</nav>
