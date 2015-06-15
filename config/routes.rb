@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
+  
+  resources :elements
   resources :collections
-
+  get '/elements/delete'
   root 'pages#show'
   
   devise_for :users

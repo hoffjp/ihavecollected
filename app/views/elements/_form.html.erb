@@ -1,0 +1,15 @@
+
+<%= form_for @element do |f| %>
+<%= f.label "Element Name" %>
+<%= f.text_field :name %>
+<%= f.label "Collection" %>
+<!-- %= #f.text_field :collection_id , placholder: @element.collection_id % -->
+<% :collection_id = @element.collection_id %>
+<%= f.inspect %>
+<br>
+
+
+<br>
+<%= f.submit %>
+
+<% end %>

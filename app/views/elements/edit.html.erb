@@ -1,2 +1,10 @@
 <h1>Elements#edit</h1>
 <p>Find me in app/views/elements/edit.html.erb</p>
+
+
+<p><B>Collection:</B> <%= Collection.find(@element.collection_id).name%></p>
+
+<%= render 'form' %>
+
+<%= button_to "Delete Element", element_path(@element) , method: :delete
+%>

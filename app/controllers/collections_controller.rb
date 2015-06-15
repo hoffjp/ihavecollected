@@ -7,9 +7,11 @@ class CollectionsController < ApplicationController
   end
 
   def show
+    
     if current_user.id != @collection.user_id
       flash.now[:alert] = "*** Cannot Edit Others Collections ***"
     end
+    @elements = Element.all
   end
 
   def index 
@@ -34,6 +36,10 @@ class CollectionsController < ApplicationController
     @collection.destroy
     redirect_to collections_path
   end
+
+  def returnID
+    @coll_id
+  end
   
   private
     def set_collection
@@ -45,5 +51,6 @@ class CollectionsController < ApplicationController
     def collection_params
       params.require(:collection).permit(:user_id,:object ,:name, :personal,:description)
     end
+    
   
 end
