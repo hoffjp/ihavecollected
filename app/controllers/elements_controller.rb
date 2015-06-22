@@ -8,26 +8,30 @@ class ElementsController < ApplicationController
   end
 
   def show
-    @colhelp
+    @collection = Collection.find(params[:collection_id])
   end
   
   def create
-    element = Collection.Element.new(element_params)
-    element.save
-    @colhelp = Collection.find(element.collection_id).name
-    redirect_to element_path(element.id)
+    @element = Element.new(element_params)
+    @element.collection_id = params[:collection_id]
+    @element.save
+    @colhelp = Collection.find(@element.collection_id)
+    redirect_to collection_element_path(@colhelp , @element.id)
   end
   
   
   
   def edit
-    @colhelp 
+    @collection = Collection.find(params[:collection_id])
   end
 
   def new
-    @element = Element.new
+
+    #throw params
     
-  
+    @col = Collection.find(params[:collection_id])
+    @element = Element.new
+    @element.collection_id = params[:collection_id]
     
   end
 

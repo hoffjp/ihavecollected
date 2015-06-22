@@ -1,7 +1,8 @@
 <h1>Elements#show</h1>
 <p>Find me in app/views/elements/show.html.erb</p>
 
-<B>Element</B> <I><%= link_to @element.name, edit_element_path(@element)  %></I> belongs to <B>Collection </B> <I><%= Collection.find(@element.collection_id).name %></I>
 
+<B>Element</B> <I><%= link_to @element.name, edit_collection_element_path(@collection,@element)  %></I> belongs to <B>Collection </B> <I><%= Collection.find(@element.collection_id).name %></I>
 <br><br>
-<%= link_to "This Collection", collection_path(@element.collection_id) %>
+
+<%= link_to "This Collection", collection_path(@element.collection_id)   %>

@@ -4,7 +4,19 @@
 
 <p><B>Collection:</B> <%= Collection.find(@element.collection_id).name%></p>
 
-<%= render 'form' %>
+<%= form_for [@collection, @element] do |f| %>
 
-<%= button_to "Delete Element", element_path(@element) , method: :delete
+<%= f.label "Element Name" %>
+<%= f.text_field :name %>
+<!-- % :collection_id = @element.collection_id % -->
+<!--  %= f.inspect % -->
+<br>
+
+
+<br>
+<%= f.submit %>
+
+<% end %> 
+
+<%= button_to "Delete Element", collection_element_path(@collection, @element) , method: :delete
 %>

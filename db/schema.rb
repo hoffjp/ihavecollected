@@ -16,25 +16,24 @@ ActiveRecord::Schema.define(version: 20150605043309) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "collections", force: true do |t|
+  create_table "collections", force: :cascade do |t|
     t.string   "object"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "name"
     t.boolean  "personal",    default: true
-    t.string   "decription"
     t.string   "description"
   end
 
-  create_table "elements", force: true do |t|
+  create_table "elements", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "collection_id"
     t.string   "name"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

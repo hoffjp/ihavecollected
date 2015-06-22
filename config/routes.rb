@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
   
-  resources :elements
-  resources :collections
+  #resources :elements
+  resources :collections do
+    resources :elements
+  end
   get '/elements/delete'
   root 'pages#show'
   

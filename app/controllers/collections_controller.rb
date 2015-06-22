@@ -1,6 +1,6 @@
 class CollectionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_collection , only: [:show, :edit, :update, :destroy]
+  before_action :set_collection , only: [:show, :edit, :update, :destroy, :returnID]
   
   def new
     @collection = Collection.new 
@@ -38,7 +38,7 @@ class CollectionsController < ApplicationController
   end
 
   def returnID
-    @coll_id
+    @coll_id = @collection
   end
   
   private
