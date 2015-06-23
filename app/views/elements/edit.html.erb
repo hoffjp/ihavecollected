@@ -18,5 +18,7 @@
 
 <% end %> 
 
-<%= button_to "Delete Element", collection_element_path(@collection, @element) , method: :delete
-%>
+<%= button_to "Delete Element", collection_element_path(@collection, @element) , method: :delete %>
+<br>
+<br>
+<%= link_to "Back to Collection", collection_path(@collection) %>
