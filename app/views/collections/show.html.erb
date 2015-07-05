@@ -1,27 +1,28 @@
-<h1>Collection</h1>
-
+<div class="row">
+<div class="col-md-4">
 <% if current_user.id == @collection.user_id %>
   <%= link_to @collection.name, edit_collection_path(@collection)%> 
-<dev>
+
   <h3>Description</h3>
   <p><%= @collection.description %></p>
-</dev>
 
 <% else %>
-  <h2><%= flash[:alert] %></h2>
-  
+  <h2><%= flash[:alert] %></h2>  
 <% end %>
+</div>
 
-<dev>
+<div class="col-md-4">
   <h3>Elements</h3>
     <% Element.all.each do |element| %>
       <% if element.collection_id == @collection.id %>
         <li> <%= link_to element.name, edit_collection_element_path(element, :collection_id => @collection.id) %></li>
       <% end %>
     <% end %>
-</dev>
-<br>
+</div>
+<div class="col-md-4">
 <%= link_to "Add Element", new_collection_element_path(@collection.id) %>
 <br>
 <br>
 <%= link_to "Back to My Collections" , collections_path %>
+  </div>
+</div>

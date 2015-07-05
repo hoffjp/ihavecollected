@@ -1,8 +1,6 @@
-<h1>Elements#edit</h1>
-<p>Find me in app/views/elements/edit.html.erb</p>
-
-
-<p><B>Collection:</B> <%= Collection.find(@element.collection_id).name%></p>
+<div class="row">
+  <div class="col-md-4">
+  <p><B>Collection:</B> <%= Collection.find(@element.collection_id).name%></p>
 
 <%= form_for [@collection, @element] do |f| %>
 
@@ -22,3 +20,5 @@
 <br>
 <br>
 <%= link_to "Back to Collection", collection_path(@collection) %>
+  </div><div class="col-md-8"></div>
+</div>
