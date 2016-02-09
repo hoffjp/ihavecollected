@@ -10,7 +10,7 @@ But, initially, let's get a fundamental Rails application erected.
 The set of data should be a 'Collection' and each user can have many.
 Within the 'Collection' there will be data items and field labels (the exact name to be determined)
 
-For testing and development, I plan to generate some "seed data" (in db/seeds.rb)
+For testing and development, I plan to generate some "seed data" (in db/seeds.rb).  This will define the architecture.
 
 ### Routes
 
