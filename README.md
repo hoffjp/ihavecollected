@@ -8,9 +8,9 @@ But, initially, let's get a fundamental Rails application erected.
 ### Naming Conventions
 
 The set of data should be a 'Collection' and each user can have many.
-Within the 'Collection' there will be data items and field labels (the exact name to be determined)
+Within the 'Collection' there will be only data items and field labels (the exact name to be determined)
 
-For testing and development, I plan to generate some "seed data" (in db/seeds.rb).  This will define the architecture.
+For testing and development it is important to generate some "seed data" (in db/seeds.rb).  This will define the architecture.
 
 ### Routes
 
