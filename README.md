@@ -87,7 +87,7 @@ gem 'simple_form'
 
 ```
 
-Edited the `database.yml` file.
+Edit the `database.yml` file.
 
 And then `bundle`
 
