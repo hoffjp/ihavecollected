@@ -5,10 +5,10 @@ describe "User's Collections" do
     @user = User.create( email: "tester@testing.com", password: "12345678", password_confirmation: "12345678" )
 	@user.collections.create(name: 'Collection Number 1', personal: false)
     @user.collections.create(name: 'Collection Number 2', personal: true)
-#	elements = []
-#	1.upto(10) do |e|
-#	elements << ordinalize(e)
-#	end
+	elements = []
+	1.upto(10) do |e|
+	elements << ordinalize(e)
+	end
 
 @full_collection = @user.collections.create(name: "A Complete Collection", personal: false, description: "This is a collection of all the things I have ever owned and will own in the future.  The list of 'elements' is, currently, a HASH (Array) but must be persisted (somehow) in a flexible manner; that is a programming challenge for you") #, elements: elements )
     
