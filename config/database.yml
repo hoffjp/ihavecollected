@@ -1,6 +1,4 @@
 # PostgreSQL. Versions 8.2 and up are supported.
-
-
 default: &default
   adapter: postgresql
   encoding: unicode
