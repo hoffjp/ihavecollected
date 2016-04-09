@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Landing Page" do
-	describe "Page Elements" do
+	describe "Page Elements", pending: true do
 		context "header" do
 			it "includes a header" do
 				visit '/'
