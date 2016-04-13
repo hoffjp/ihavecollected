@@ -20,7 +20,7 @@ Users - who need to have an account on the system - should be able to create a n
  - Category (choose from a list) *maybe in the future one that is NOT on the list could be 'proposed' by the user*
  - List of the "Field Names"
  - make it clear to the user what is the maximum [32 maybe?]
- 
+
 Another form must be available to **enter** data in the collection
 
 There must be an 'update' action to Add/Delete items from a collection
@@ -34,7 +34,7 @@ A user should be able to mark a collection as 'Public' or 'Private' and I expect
 
 ## Behavior Driven Development
 
-I want to stretch and exercise my TDD skills.  In this case we will be performing (what is more appropriately called) Behavior Driven Development because the tests will reflect the expected 'behavior' of the application.  One of the real challenges in writing tests first is to avoid the tempation of "testing implementation details".  As a coder, I think like a coder.  I need to step-back and think in a much more abstract way - defining behavior(s).
+I want to stretch and exercise my curent TDD skills.  In this case we will be performing (what is more appropriately called) Behavior Driven Development because the tests will reflect the expected 'behavior' of the application.  One of the real challenges in writing tests first is to avoid the tempation of "testing implementation details".  As a coder, I think like a coder.  I need to step-back and think in a much more abstract way - defining behavior(s).
 
 The tests will be designed to fail until the appropriate behavior is built into the application.  When writing the code you should avoid the OTHER temptation to write concise and clever code.  Be sure to restrict yourself to JUST ENOUGH TO PASS THE TEST.  There is an additional step that involves refactoring the code.  With the safety-net of the tests you are free to be a bit bolder in your refactoring.
 
@@ -48,7 +48,7 @@ I initiated the application with this command
 rails new ihavecollected -T -d postgresql
 ```
 
-Edited the Gemfile as follows: 
+Edited the Gemfile as follows:
 
 ```yaml
 source 'https://rubygems.org'
@@ -71,7 +71,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
  gem 'bcrypt', '~> 3.1.7'
 
 ### --- Testomg ---
-### Install/activate RSpec with 
+### Install/activate RSpec with
 ###    rails generate rspec:install && rspec spec --format documentation
 group :test do
   gem 'rspec-rails'
