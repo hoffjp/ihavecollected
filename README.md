@@ -1,7 +1,5 @@
 # I Have Collected
 
-From a very broad view, this is how I expect this application to behave.
-
 Generally, I like the idea of building a solid API where the front-end is irrelevant (or can be replaced).  Recently, I have been reading a lot about Ember.js and would like to try creating a client with that framework.
 But, initially, let's get a fundamental Rails application erected.
 
