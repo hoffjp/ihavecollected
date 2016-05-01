@@ -19,7 +19,7 @@ Users - who need to have an account on the system - should be able to create a n
  - Collection Name
  - Category (choose from a list) *maybe in the future one that is NOT on the list could be 'proposed' by the user*
  - List of the "Field Names"
- - make it clear to the user what is the maximum [32 maybe?]
+ - make it clear to the user what is the maximum [12 maybe?]
 
 Another form must be available to **enter** data in the collection
 
