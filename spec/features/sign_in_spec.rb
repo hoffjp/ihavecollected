@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 feature "Sign in", :type => :feature do
 		it "is accessible from the landing page" do
 		visit root_url
