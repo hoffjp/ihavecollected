@@ -53,7 +53,6 @@ Edited the Gemfile as follows:
 ```yaml
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.0'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -90,5 +89,6 @@ Edit the `database.yml` file.
 And then `bundle`
 
 ---
+
 
 Last updated May 2016
