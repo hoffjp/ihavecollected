@@ -36,7 +36,7 @@ A user should be able to mark a collection as 'Public' or 'Private' and I expect
 
 I want to stretch and exercise my curent TDD skills.  In this case we will be performing (what is more appropriately called) Behavior Driven Development because the tests will reflect the expected 'behavior' of the application.  One of the real challenges in writing tests first is to avoid the tempation of "testing implementation details".  As a coder, I think like a coder.  I need to step-back and think in a much more abstract way - defining behavior(s).
 
-The tests will be designed to fail until the appropriate behavior is built into the application.  When writing the code you should avoid the OTHER temptation to write concise and clever code.  Be sure to restrict yourself to JUST ENOUGH TO PASS THE TEST.  There is an additional step that involves refactoring the code.  With the safety-net of the tests you are free to be a bit bolder in your refactoring.
+The tests are to be designed to fail until the appropriate behavior is built into the application.  When writing the code you should avoid the OTHER temptation to write concise and clever code.  Be sure to restrict yourself to JUST ENOUGH TO PASS THE TEST.  There is an additional step that involves refactoring the code.  With the safety-net of the tests you are free to be a bit bolder in your refactoring.
 
 ---
 
