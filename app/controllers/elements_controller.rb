@@ -1,9 +1,6 @@
 class ElementsController < ApplicationController
   before_action :set_element, only: [:show, :edit, :update, :destroy]
   
-  @coll_id
-  @colhelp
-  
   def index
   end
 
